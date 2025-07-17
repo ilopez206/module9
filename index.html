@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Some Photos</title>
+    <link rel="stylesheet" href="main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Gowun+Dodum&family=Poiret+One&display=swap" rel="stylesheet">
+</head>
+<body class="flexContainer">
+    <div id="container">
+    <header class="poiret-one-regular">
+    <h1><em>Here are a few more of my photos!</em></h1></header>
+    <nav>
+        <ul>
+        <li><a class="active" href="index.html">About</a></li>
+        <li><a href="photo_two.html">Photo 2</a></li>
+        <li><a href="photo_one.html">Photo 1</a></li>
+        <li><a href="#about">Home</a></li>
+</ul>
+    </nav>
+    <section>
+        <article class="left"><h2><i>Photo 1</i></h2>
+            <img src="assets/images/72ACA616-400D-453E-804E-F6B73AC152E5_1_105_c.jpeg"
+            style="width: 420px;"
+            alt="Inside of Museum">
+        </article>
+        <article class="middle"><h2><i>Photo 2</i></h2>
+            <img src="assets/images/4548778D-2C83-40D0-88DE-70EACE90EA46_1_105_c.jpeg"
+            style="width: 420px;"
+            alt="Photo of Sky"
+            usemap="#Sky">
+            <map name="#Sky">
+              <area shape="rect" coords="3, 3, 1024, 700" alt="Photo 1" href="photo_two.html">  
+            </map>   
+        </article>
+        <article class="right">
+            <p><a href="photo_one.html"> Closer look at Photo 1</a></p>
+            <p><a href="photo_two.html"> Closer look at Photo 2</a></p>   
+        </article>
+        <span><p>I like taking photos as a hobby,</span><span>I started about 2 years ago and</span><span>I loved it since then.</p></span>
+    </section>
+    <footer><h3><b>By Isaiah Lopez</b></h3></footer>
+    <form action="">
+        <label for="Email">E-Mail:</label><br>
+        <input type="text" id="Email" name="Email"><br><br>
+        <label for="Checkbox">Are you a Human?</label>
+        <input type="checkbox" id="Checkbox" name="Checkbox"><br><br>
+        <input type="submit" id="Button" value="Sign Up Now for Updates!">
+    </form>
+     <audio controls>
+  <source src="assets/audio/11L-sound_of_trees_with_-1751601885791.mp3" type="audio/mpeg">
+Your browser does not support the audio element.
+</audio> 
+    <footer class="hidden">Super Secret Text Here!</footer><br>
+        <button onclick="getLocation()">Try It</button>
+
+<p id="demo"></p>
+<script>
+const x = document.getElementById("demo");
+
+function getLocation() {
+  if (navigator.geolocation) {
+    navigator.geolocation.getCurrentPosition(success, error);
+  } else { 
+    x.innerHTML = "Geolocation is not supported by this browser.";
+  }
+}
+
+function success(position) {
+  x.innerHTML = "Latitude: " + position.coords.latitude + 
+  "<br>Longitude: " + position.coords.longitude;
+}
+
+function error() {
+  alert("Sorry, no position available.");
+}
+</script>
+    </div>
+</body>
+</html>
